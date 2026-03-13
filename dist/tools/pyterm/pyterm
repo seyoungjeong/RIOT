@@ -276,7 +276,7 @@ class SerCmd(cmd.Cmd):
         elif self.process:
             process_call = [self.process] + self.process_args
             self.logger.debug("Executing process as %s", str(process_call))
-            self.ser = Popen(process_call, stdout=PIPE, stdin=PIPE, stderr=PIPE)
+            self.ser = Popen(process_call, stdout=PIPE, stdin=PIPE)
         # otherwise go for the serial port
         elif self.port:
             connected = False
